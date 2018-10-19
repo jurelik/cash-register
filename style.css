@@ -11,6 +11,10 @@ body, html {
 }
 
 /* Class Definitions */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* ID Definitions */
 
