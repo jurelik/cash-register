@@ -11,7 +11,36 @@ body, html {
 }
 
 /* Class Definitions */
+.form-row {
+  align-items: center;
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  margin: 2px;
+  width: 500px;
+}
+
+.txt-input {
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  height: 30px;
+  text-align: left;
+}
 
 /* ID Definitions */
+#container {
+  align-items: center;
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+#result {
+  height: 30px;
+}
 
 /* Media Queries */

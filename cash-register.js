@@ -1,3 +1,17 @@
+let cash = document.getElementById('cash');
+let price = document.getElementById('price');
+let oneHundred = document.getElementById('one-hundred');
+let twenty = document.getElementById('twenty');
+let ten = document.getElementById('ten');
+let five = document.getElementById('five');
+let one = document.getElementById('one');
+let quarter = document.getElementById('quarter');
+let dime = document.getElementById('dime');
+let nickel = document.getElementById('nickel');
+let penny = document.getElementById('penny');
+let form = document.getElementById('cash-register');
+let resultPara = document.getElementById('result');
+
 function checkCashRegister(price, cash, cid) {
   // Variable declarations
   let denom = [
@@ -60,5 +74,15 @@ function checkCashRegister(price, cash, cid) {
   }
 
   console.log(result);
+  resultPara.innerHTML = `${result.status} // ${result.change}`;
   return result;
 }
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  let registerArray = [['ONE HUNDRED', oneHundred.value], ['TWENTY', twenty.value], ['TEN', ten.value], ['FIVE', five.value], ['ONE', one.value], ['QUARTER', quarter.value], ['DIME', dime.value], ['NICKEL', nickel.value], ['PENNY', penny.value]];
+
+  checkCashRegister(price.value, cash.value, registerArray);
+  console.log(registerArray);
+});
